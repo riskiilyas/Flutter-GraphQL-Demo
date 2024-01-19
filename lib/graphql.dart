@@ -1,12 +1,12 @@
 import 'package:graphql_flutter/graphql_flutter.dart';
 
+// This Would Be Useful With StateManagement
 class GraphQLService {
   GraphQLClient? _client;
   final String url;
   final String? token;
   final GraphQLCache? cache;
 
-  // GraphQLClient get client => _client;
   GraphQLService({required this.url, this.token, this.cache});
 
   Future<dynamic> query({required QuerySchema schema, String? token}) async {

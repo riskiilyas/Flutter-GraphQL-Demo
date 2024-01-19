@@ -21,6 +21,7 @@ void main() {
     final schema = NoteSubscriptionSchema();
     subscription = graphQLService.subscribe(schema: schema);
     subscription.listen((event) {
+      print(event);
       emittedStatus.add(event['status'].toString());
     });
 
